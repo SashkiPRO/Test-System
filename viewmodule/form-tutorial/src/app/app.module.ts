@@ -3,14 +3,22 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { DemoFormSkuComponent } from './demo-form-sku/demo-form-sku.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { DemoFormSkuWithBuildeComponent } from './demo-form-sku-with-builde/demo-form-sku-with-builde.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DemoFormSkuComponent,
+    DemoFormSkuWithBuildeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+//
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
