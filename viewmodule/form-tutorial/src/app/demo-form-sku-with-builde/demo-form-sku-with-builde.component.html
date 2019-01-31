@@ -1,4 +1,6 @@
-<h2 class="ui header">Demo Form: Sku with Builder</h2>
+
+<div class="ui raised segment">
+  <h2 class="ui header">Demo Form: Sku with Builder</h2>
 <form [formGroup]="myForm"
       (ngSubmit)="onSubmit(myForm.value)"
       class="ui form"
@@ -18,6 +20,9 @@
   <div *ngIf="!myForm.valid"
        class="ui error message">Form is invalid
   </div>
+  <div *ngIf="sku.hasError('invalidSku')"
+       class="ui error message">SKU must begin with <span>123</span></div>
   <button type="submit" class="ui button">Submit</button>
 
 </form>
+</div>
